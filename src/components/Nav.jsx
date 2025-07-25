@@ -6,6 +6,11 @@ import { isLogin } from '../atoms/IsLoginAtom'
 export default function Nav() {
   const [login, seLogin] = useAtom(isLogin) ;
 
+  const handleLogout = () => {
+    seLogin(false) ;
+    localStorage.removeItem("id") ;
+  }
+  
   return (
     <header className="w-full min-h-20 
                          bg-green-50
@@ -32,7 +37,7 @@ export default function Nav() {
                         border border-green-700 rounded-xl'>
           { login ? 
             <span   className='cursor-pointer'
-                    onClick={() => seLogin(false)}>로그아웃</span> 
+                    onClick={handleLogout}>로그아웃</span> 
             : "로그인" }
         </div>
       </header>
