@@ -27,7 +27,7 @@ export default function TodoForm({addTodo}) {
     txtRef.current.focus() ;
   } , []);
   return (
-    <div className="w-full bg-amber-100 p-4">
+    <div className="w-full bg-amber-100 p-4 mb-5">
       <div className="w-full p-5 flex justify-center items-center text-2xl font-bold">
         Todo List
       </div>

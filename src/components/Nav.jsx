@@ -1,14 +1,15 @@
 import reactLogo from '../assets/react.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAtom } from 'jotai'
 import { isLogin } from '../atoms/IsLoginAtom'
 
 export default function Nav() {
   const [login, seLogin] = useAtom(isLogin) ;
-
+  const navigator = useNavigate() ;
   const handleLogout = () => {
     seLogin(false) ;
     localStorage.removeItem("id") ;
+    navigator("/");
   }
   
   return (
