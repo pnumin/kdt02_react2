@@ -31,6 +31,11 @@ export default function Nav() {
               지하철 대기정보
             </li>
           </Link> }
+          { login && <Link to="/todo">
+            <li className='p-4 rounded-lg hover:bg-green-800  hover:text-white'>
+              할일목록
+            </li>
+          </Link> }
           </ul>
         </div>
         <div className='mr-10 text-xl font-bold p-3 text-green-900
